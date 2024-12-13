@@ -1,0 +1,581 @@
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-color: #FF6F50;
+    --button-text-color: #ffffff;
+}
+    /* @media (prefers-color-scheme: dark) {
+        :root {
+            --background-color: #121212;
+            --text-color: #f1f1f1;
+            --button-color: #333333;
+            --button-text-color: #FF6F50;
+        } */
+    /* } */
+
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #f1f1f1;
+    --button-color: #333333;
+    --button-text-color: #FF6F50;
+}
+
+/* Dark Mode Toggle Button */
+.dark-mode-button {
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+    padding: 0.2rem 1rem;
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    @media (min-width: 600px) {
+        top: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+.dark-mode-button:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+body {
+    margin: 0; /*weghalen*/
+    padding: 0; /*weghalen*/
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh; 
+
+    @media (max-width: 768px) {
+        font-size: 0.9rem;
+    }
+}
+
+/* Hero sectie */
+.hero {
+    position: relative;
+    background-image: url('Assets/hoofdpagina\ image.png'); 
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-rows: auto auto auto; 
+    align-items: center;
+    justify-items: center;
+    height: 70vh; /*weghalen*/
+
+    @media (max-width: 768px) {
+        height: 60vh; 
+    }
+
+    @media (min-width: 1024px) {
+        height: 80vh; 
+    }
+}
+
+/* Logo */
+.logo {
+    grid-row: 2; /*eventueel weghalen*/
+    margin-bottom: 15em;
+
+    @media (max-width: 768px) {
+        width: 120px;
+    }
+
+    @media (min-width: 1024px) {
+        width: 150px;
+    }
+}
+
+/* Menu Button */
+.menu-button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 2rem; /*weghalen*/
+    height: 1.5rem; /*weghalen*/
+
+    @media (max-width: 768px) {
+        width: 1.5rem;
+        height: 1.2rem;
+    }
+}
+
+.menu-button span {
+    display: block;
+    width: 100%;
+    height: 0.2rem;
+    background: rgb(0, 0, 0);
+}
+
+/* Hoofdtekst */
+.hoofdtekst {
+    grid-row: 3; 
+    text-align: center;
+    font-size: 2.5rem; /*weghalen*/
+    color: white; /*weghalen*/
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /*weghalen*/
+
+    @media (max-width: 768px) {
+        font-size: 1.8rem;
+    }
+
+    @media (min-width: 1024px) {
+        font-size: 3rem;
+    }
+}
+
+/* Artikelen-sectie */
+.artikelen {
+    text-align: left; /*weghalen*/
+    padding: 2em;
+    position: relative; /*weghalen*/
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 1em; 
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 2em; 
+        max-width: 100%;
+    }
+}
+
+/* Header met titel en actiebutton */
+.action-header {
+    display: flex;
+    align-items: center; /*weghalen*/
+    justify-content: space-between; /*kijk ernaar*/
+    padding-bottom: 0.5em;
+    margin-left: -1.5em; /*margin-left aanpassen of weghalen*/
+    gap: 1em;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/*class: heading_article geeft niet de grote die ik wil handhaven 
+vandaar de classnaam van de header*/
+.action-header h2 {
+    font-size: 2rem; /*weghalen*/
+    border-bottom: 1.5px solid #000;
+    font-weight: 600; /*weghalen*/
+    margin: 0;
+    padding-bottom: 0.2em;
+    color: #000;
+    line-height: 1.4;
+    display: inline-block;
+
+    @media (max-width: 768px) {
+        font-size: 1.5rem;
+    }
+}
+
+/* Button */
+.button {
+    background-color: #FF6F50; 
+    border-radius: 50%;
+    width: 40px; /*weghalen*/
+    height: 40px; /*weghalen*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    @media (max-width: 768px) {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* Afbeelding en onderschrift */
+figure.slide-article {
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    max-width: 60%; 
+    align-items: center; 
+
+    @media (min-width: 1024px) and (max-width: 1940px) {
+        max-width: 30%; 
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90%; 
+        gap: 0.3rem; 
+    }
+}
+
+.slide-article {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto; 
+
+    @media (min-width: 1600px) {
+        max-width: 80%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 90%;
+        gap: 0.3rem;
+    }
+}
+
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+
+    @media (max-width: 768px) {
+        border-radius: 3px; 
+    }
+}
+
+/* Styling voor de afbeelding */
+figure.slide-article img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+    @media (min-width: 1024px) and (max-width: 1940px) {
+        border-radius: 4px; 
+    }
+
+    @media (max-width: 768px) {
+        border-radius: 3px; 
+    }
+}
+
+/* Individuele artikelen kijk of je dit element nodig hebt
+alleen margin-bottom kan hierbij nuttig zijn */ 
+.artikelen img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 5px;
+    margin-bottom: 1em;
+
+    @media (max-width: 768px) {
+        border-radius: 3px;
+    }
+}
+
+/*weghalen er is niks in me html die wat met deze class doet*/
+figcaption {
+    font-size: 0.9rem;
+    color: #000;
+}
+
+
+
+
+/* Pagination */
+.dots {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 0.5em; /*weghalen*/
+    margin-top: 1em; 
+
+    @media (max-width: 768px) {
+        gap: 0.3em; 
+    }
+}
+
+.dots button {
+    width: 10px; /*weghalen*/
+    height: 10px; /*weghalen*/
+    background: #ccc; /*weghalen*/
+    border-radius: 50%;
+    border: none; /*weghalen*/
+    cursor: pointer; /*weghalen*/
+    transition: background-color 0.3s ease; /*weghalen*/
+
+    @media (max-width: 768px) {
+        width: 8px;
+        height: 8px; 
+    }
+}
+
+.dots .dot.active {
+    background: #333; 
+}
+
+
+/* Algemene instellingen voor de nav-bar */
+nav.onderwerpen {
+    background-color: #000000; 
+    padding: 0.5rem 0; 
+    display: flex;
+    justify-content: center;
+}
+
+nav.onderwerpen ul {
+    list-style: none; /*weghalen*/
+    display: flex;
+    gap: 2rem; 
+    margin: 0;
+    padding: 0;
+}
+
+/*weghalen*/
+nav.onderwerpen ul li {
+    display: inline-block;
+}
+
+nav.onderwerpen ul li a {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1rem; 
+    font-weight: normal;/*weghalen*/
+    font-family: Arial, sans-serif;/*weghalen*/
+    transition: color 0.3s ease; /*weghalen niet perse nodig hoort bij hover*/
+}
+
+/*weghalen*/
+nav.onderwerpen ul li a:hover {
+    color: gray; 
+}
+
+/* Algemene styling voor de sectie */
+.artikel-sectie {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /*weghalen*/
+    gap: 2rem; 
+    padding: 2rem; 
+    background-image: url('Assets/background.svg'); /*weghalen*/
+    background-repeat: no-repeat; /*weghalen*/
+    background-position: center; /*weghalen*/
+    background-size: cover; /*weghalen*/
+    position: relative; /*weghalen*/
+    z-index: 0; /*weghalen*/
+    
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
+    }
+}
+
+
+
+/* Individuele artikelen */
+.artikel {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-bottom: 1px solid black;
+    padding-bottom: 1.5rem; /*weghalen*/
+    gap: 1rem;
+    position: relative; /*weghalen*/
+    z-index: 1; /*weghalen*/
+    background: rgba(255, 255, 255, 0); /*weghalen*/
+    border-radius: 10px; /*weghalen*/
+    padding: 1rem; 
+}
+
+/* Header binnen een artikel */
+.artikel-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Titel van de categorie */
+.categorie-title {
+    font-size: 1.2rem;
+    font-weight: bold; /*weghalen*/
+    color: white;
+    background-color: black;
+    display: inline-block; /*weghalen*/
+    padding: 0.3rem 1rem;
+}
+
+/* Beschrijvende tekst */
+.categorie-tekst {
+    font-size: 1rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* Buttons */
+.artikel-button {
+    margin-top: 1rem;
+    padding: 0.3rem 0.6rem; /*weghalen*/
+    font-size: 0.8rem; /*weghalen*/
+    color: #fff;
+    background-color: #E85340;
+    border: none; /*weghalen*/
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border-radius: 5px;
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem; 
+    }
+}
+
+.artikel-button:hover {
+    background-color: #c44233;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+/* Artikel sectie 
+.artikel-sectie {
+    grid-template-columns: repeat(2, 1fr); onnodige code*/
+
+
+/* Algemene styling voor de schrijvers-sectie */
+.schrijvers {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    padding: 2rem; 
+    background-color: #ffffff; 
+}
+
+/* SVG styling */
+.schrijvers svg {
+    max-width: 100%; 
+    max-height: 100%; 
+    width: auto; 
+    height: auto;
+    display: block; 
+}
+
+
+.donatie svg {
+    width: 100%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+    min-width: 300px;
+    max-width: 100%; /*voeg toe bij issues*/
+}
+
+/* Aanpassingen voor tablets en grotere schermen */
+@media (min-width: 768px) {
+    .donatie svg {
+        max-width: 900px; 
+        margin: 0 auto; /*weghalen*/
+    }
+}
+
+@media (min-width: 1200px) {
+    .donatie svg {
+        max-width: 700px; 
+        margin: 0 auto; /*weghalen*/
+    }
+}
+
+
+/* Algemene styling voor de footer */
+.site-footer {
+    background-color: #ffffff00; /*weghalen*/
+    color: #000000;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Container binnen de footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+}
+
+/* Secties in de footer */
+.site-footer section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #ff6f50;
+}
+
+.site-footer section p,
+.site-footer section ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-footer section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.site-footer section ul li a {
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #ff6f50;
+    }
+}
+
+/* Social media links */
+.footer-social ul {
+    display: flex;
+    gap: 1rem;
+
+    @media (max-width: 768px) {
+        justify-content: center;
+    }
+} 
+
+.footer-social ul li img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Onderste regel */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}
+
+
+
