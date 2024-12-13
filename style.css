@@ -4,14 +4,14 @@
     --button-color: #FF6F50;
     --button-text-color: #ffffff;
 }
-    /* @media (prefers-color-scheme: dark) {
+    @media (prefers-color-scheme: dark) {
         :root {
             --background-color: #121212;
             --text-color: #f1f1f1;
             --button-color: #333333;
             --button-text-color: #FF6F50;
-        } */
-    /* } */
+        }
+    }
 
 
 body {
