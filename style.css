@@ -184,11 +184,11 @@ body {
 vandaar de classnaam van de header*/
 .action-header h2 {
     font-size: 2rem; /*weghalen*/
-    border-bottom: 1.5px solid #000;
+    border-bottom: 1.5px solid var(--text-color);
     font-weight: 600; /*weghalen*/
     margin: 0;
     padding-bottom: 0.2em;
-    color: #000;
+    color: var(--text-color);
     line-height: 1.4;
     display: inline-block;
 
@@ -508,8 +508,8 @@ nav.onderwerpen ul li a:hover {
 
 /* Algemene styling voor de footer */
 .site-footer {
-    background-color: #ffffff00; /*weghalen*/
-    color: #000000;
+    background-color: var(--background-color); /*weghalen*/
+    color: var(--);
     padding: 2rem;
     font-size: 0.9rem;
 }
