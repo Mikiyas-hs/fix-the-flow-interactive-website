@@ -297,7 +297,7 @@ alleen margin-bottom kan hierbij nuttig zijn */
 /*weghalen er is niks in me html die wat met deze class doet*/
 figcaption {
     font-size: 0.9rem;
-    color: #000;
+    /* color:  */
 }
 
 
