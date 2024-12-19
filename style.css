@@ -5,12 +5,12 @@
     --button-text-color: #ffffff;
 }
     @media (prefers-color-scheme: dark) {
-        :root {
+        /* :root {
             --background-color: #121212;
             --text-color: #f1f1f1;
             --button-color: #333333;
             --button-text-color: #FF6F50;
-        }
+        } */
     }
 
 
@@ -95,6 +95,7 @@ body {
 .logo {
     grid-row: 2; /*eventueel weghalen*/
     margin-bottom: 15em;
+    filter: drop-shadow(2px 4px 6px white);
 
     @media (max-width: 768px) {
         width: 120px;
